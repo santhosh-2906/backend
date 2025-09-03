@@ -1,12 +1,12 @@
 import mysql.connector
 
-DB_NAME = "todo_app"
+DB_NAME = "b7mhanlonjp5hn8uiuoy"
 
 def get_db_connection(db_required=True):
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",         
-        password="Sandy@123"
+        host="b7mhanlonjp5hn8uiuoy-mysql.services.clever-cloud.com",
+        user="uh6jh8knswi9fpie",         
+        password="YRRGCafTISFAdSJpqTeG"
     )
     cursor = conn.cursor()
     cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
@@ -16,9 +16,9 @@ def get_db_connection(db_required=True):
 
     if db_required:
         return mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="Sandy@123",
+            host="b7mhanlonjp5hn8uiuoy-mysql.services.clever-cloud.com",
+            user="uh6jh8knswi9fpie",
+            password="YRRGCafTISFAdSJpqTeG",
             database=DB_NAME
         )
     return None
